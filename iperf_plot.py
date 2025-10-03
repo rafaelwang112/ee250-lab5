@@ -9,7 +9,7 @@ def main():
         udp_data = pd.read_csv("iperf_udp_" + str(distance) +"m.csv")
 
         tcp_row = tcp_data[" Run1"].values[0] #all 5 values stored in Run1 
-        tcp_row = tcp_row.split() #parse into a Python float list
+        tcp_row = tcp_row.split()
         for i in range (len(tcp_row)):
             tcp_row[i]=float(tcp_row[i])
 
